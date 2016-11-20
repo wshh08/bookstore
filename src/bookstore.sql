@@ -1,0 +1,7 @@
+USE bookstore;
+CREATE TABLE category(
+  id VARCHAR(100) PRIMARY KEY ,
+  name VARCHAR(100) NOT NULL UNIQUE ,
+  description VARCHAR(255)
+) DEFAULT CHARACTER SET utf8;
+
