@@ -10,5 +10,6 @@
 <%--静态包含，在服务器端编译JSP时处理，所以绝对路径'/'相当于应用根目录--%>
 <%@include file="/manage/header.jsp"%>
 <br/>
+<h2>欢迎使用</h2>
 </body>
 </html>

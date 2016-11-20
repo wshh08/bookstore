@@ -6,6 +6,9 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <html>
 <head>
     <title>后台管理</title>
@@ -16,7 +19,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <h1>XX书店后台管理</h1>
 <a href="${pageContext.request.contextPath}/manage/addCategory.jsp">添加分类</a>
-<a href="">查看分类</a>
+<a href="${pageContext.request.contextPath}/servlet/ControllerServlet?op=listCategories">查看分类</a>
 <a href="">添加书籍</a>
 <a href="">查看书籍</a>
 <a href="">查看订单</a>

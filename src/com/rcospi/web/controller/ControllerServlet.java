@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.List;
 
 /**
  * Created by wshh08 on 16-11-20.
@@ -24,16 +25,25 @@ public class ControllerServlet extends HttpServlet {
 //        request.setCharacterEncoding("UTF-8");
         String op = request.getParameter("op");
         if ("addCategory".equals(op)) {
-            addCategory(request);
+            addCategory(request, response);
             response.getWriter().write("<script>alert('添加成功')</script>");
             response.setHeader("Refresh", "1;URL=" + request.getContextPath() + "/manage/addCategory.jsp");
             // 重定向，防止表单重复提交
 //            response.sendRedirect(request.getContextPath() + "/manage/addCategory.jsp");
+        } else if ("listCategories".equals(op)) {
+            listCategories(request, response);
         }
     }
 
+    // 查看所有分类
+    private void listCategories(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        List<Category> cs = s.findAllCategories();
+        request.setAttribute("cs", cs);
+        request.getRequestDispatcher("/manage/listCategories.jsp").forward(request, response);
+    }
+
     // 根据request post过来的参数完成新分类的添加操作(封装数据,模型填充、利用BeanUtils写了个WebUtil工具类)
-    private void addCategory(HttpServletRequest request) {
+    private void addCategory(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         // 封装数据
         Category category = WebUtil.fillBean(request, Category.class);
         // 调用业务方法
