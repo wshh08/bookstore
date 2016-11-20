@@ -11,6 +11,7 @@
           <element id="library" level="application" name="mysql:mysql-connector-java:6.0.4" />
           <element id="library" level="application" name="commons-dbcp:commons-dbcp:1.4" />
           <element id="library" level="application" name="commons-dbutils:commons-dbutils:1.6" />
+          <element id="library" level="application" name="commons-beanutils:commons-beanutils:1.9.3" />
         </element>
       </element>
     </root>
