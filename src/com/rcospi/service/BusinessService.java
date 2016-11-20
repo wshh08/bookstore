@@ -20,7 +20,7 @@ public interface BusinessService {
      * 修改分类
      * @param category 分类对象
      */
-    void udateCategory(Category category);
+    void updateCategory(Category category);
 
     /**
      * 根据主键删除一个分类
@@ -39,5 +39,5 @@ public interface BusinessService {
      * 查询所有分类
      * @return 结果集
      */
-    List<Category> fiandAllCategories();
+    List<Category> findAllCategories();
 }
