@@ -1,1 +1,6 @@
 # Created by .ignore support plugin (hsz.mobi)
+/out/
+/.idea/dataSources.local.xml
+/.idea/workspace.xml
+/.idea/
+/src/dbcpconfig.properties

@@ -20,5 +20,9 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" scope="PROVIDED" name="Tomcat 9.0.0.M10" level="application_server_libraries" />
+    <orderEntry type="library" name="mysql:mysql-connector-java:6.0.4" level="application" />
+    <orderEntry type="library" name="commons-dbcp:commons-dbcp:1.4" level="application" />
+    <orderEntry type="library" name="commons-dbutils:commons-dbutils:1.6" level="application" />
+    <orderEntry type="library" name="junit:junit:4.10" level="application" />
   </component>
 </module>
